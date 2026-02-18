@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@tailwind utilities;
+
+/* Ensure the app can stretch full-height for a sticky footer layout */
+html, body, #root {
+  height: 100%;
+}
+
+@font-face {
+  font-family: "tradewinds"; /* Choose a name for your font */
+  src: url("./assets/fonts/TradeWinds-Regular.ttf") format("truetype"); /* Adjust the path and filename */
+  font-weight: normal; /* Or specify the weight if your font has it */
+  font-style: normal; /* Or specify the style */
+  font-display: swap; /* Optional: Controls how font is loaded and displayed */
+}
+
+@font-face {
+  font-family: "Poppins"; /* Choose a name for your font */
+  src: url("./assets/fonts/Poppins-Regular.ttf") format("truetype"); /* Adjust the path and filename */
+  font-weight: normal; /* Or specify the weight if your font has it */
+  font-style: normal; /* Or specify the style */
+  font-display: swap; /* Optional: Controls how font is loaded and displayed */
+}
+
+@font-face {
+  font-family: "Inter"; /* Choose a name for your font */
+  src: url("./assets/fonts/Inter-VariableFont_opsz,wght.ttf") format("truetype"); /* Adjust the path and filename */
+  font-weight: normal; /* Or specify the weight if your font has it */
+  font-style: normal; /* Or specify the style */
+  font-display: swap; /* Optional: Controls how font is loaded and displayed */
+}
+
+@font-face {
+  font-family: "IBM Plex Sans Thai"; /* Choose a name for your font */
+  src: url("./assets/fonts/IBMPlexSansThai-Regular.ttf") format("truetype"); /* Adjust the path and filename */
+  font-weight: normal; /* Or specify the weight if your font has it */
+  font-style: normal; /* Or specify the style */
+  font-display: swap; /* Optional: Controls how font is loaded and displayed */
+}
+
+@theme {
+  --font-display: "Satoshi", "sans-serif";
+  --breakpoint-3xl: 120rem;
+  --color-avocado-100: oklch(0.99 0 0);
+  --color-avocado-200: oklch(0.98 0.04 113.22);
+  --color-avocado-300: oklch(0.94 0.11 115.03);
+  --color-avocado-400: oklch(0.92 0.19 114.08);
+  --color-avocado-500: oklch(0.84 0.18 117.33);
+  --color-avocado-600: oklch(0.53 0.12 118.34);
+  --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
+  --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
+  --color-cream: rgba(251, 249, 244, 1);
+  --color-sandy-beige: rgba(178, 150, 116, 1);
+  --color-wood-brown: rgba(215, 189, 144, 1);
+  --color-charcoal: rgba(73, 69, 58, 1);
+  --color-off-white: rgba(254, 253, 249, 1);
+  --color-sage-green: rgba(132, 158, 145, 1);
+  --color-footer-border: #334155;
+  --color-footer-link: #CBD5E1;
+  --color-footer-muted: #94A3B8;
+  /* ... */
+}
+
+
+.font-tradewinds {
+  font-family: "tradewinds", cursive;
+}
+
+
+/* Utility font class for IBM Plex Sans Thai across components */
+.font-ibm-thai {
+  font-family: "IBM Plex Sans Thai", "Inter", Helvetica, sans-serif;
+}
+@layer base {
+  html {
+    font-family: "Inter", "IBM Plex Sans Thai", Helvetica, sans-serif;
+    color: var(--color-charcoal); /* Applies Poppins globally */
+  }
+  h1 {
+    font-size: var(--text-2xl);
+    font-family: "Poppins","IBM Plex Sans Thai" ,sans-serif
+  }
+  h2 {
+    font-size: var(--text-xl);
+    font-family: "Poppins","IBM Plex Sans Thai" ,sans-serif
+  }
+  h3 {
+    font-size: var(--text-2xl); /* 24px */
+    font-weight: var(--font-weight-semibold);
+    font-family: "Poppins","IBM Plex Sans Thai" ,sans-serif
+  }
+  h4 {
+    font-size: var(--text-xl); /* 20px */
+    font-family: "Poppins","IBM Plex Sans Thai" ,sans-serif
+    
+  }
+
+  p {
+    font-size: var(--text-sm);
+  }
+
+  nav {
+    color: var(--color-sandy-beige);
+  }
+
+
+}
